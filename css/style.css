@@ -148,6 +148,12 @@ img {
     background-color: rgba(151, 73, 73, 0.1);
 }
 
+.modal__btn:hover,
+.modal__btn:focus {
+    cursor: pointer;
+    fill: var(--accent-color);
+}
+
 .form {
     position: relative;
     width: 448px;
@@ -161,7 +167,12 @@ img {
 
     text-align: left;
     margin-bottom: 10px;
-    width: 100%;   
+    width: 100%;      
+}
+
+.form__filed:hover,
+.form__filed:focus-visible {
+    border-color: var(--accent-color);
 }
 
 .form__text {
@@ -170,6 +181,7 @@ font-size: 20px;
 line-height: 1.15;
 margin-top: 0;
 margin-bottom: 12px;
+color: var(--primary-page-color);
 }
 
 .form__filed input {
@@ -177,6 +189,7 @@ margin-bottom: 12px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: transparent;
 }
 
 .form__filed input:hover,
@@ -198,16 +211,21 @@ margin-bottom: 12px;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: transparent;
+}
+
+.form__filed textarea:hover {
+    cursor: pointer;
 }
 
 .icon__person {
     position: absolute;
     top: 29px;
-    left: -130px;
+    left: 10px;
 }
 
-.form__input:hover .icon__person,
-.form__input:focus .icon__person {
+.form__input:hover + .icon__form,
+.form__input:focus + .icon__form {
     color: var(--accent-color);
     fill: currentColor;
 }
@@ -216,13 +234,13 @@ margin-bottom: 12px;
 .icon__tel {
     position: absolute;
     top: 97px;
-    left: -130px;
+    left: 10px;
 }
 
 .icon__mail {
     position: absolute;
     top: 164px;
-    left: -130px;
+    left: 10px;
 }
 
 .form__filed label {
@@ -234,8 +252,39 @@ margin-bottom: 12px;
 }
 
 .comment__form {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
+}
+
+.comment__form:hover {
+    cursor: pointer;
+}
+
+.icon__check {
+    display: inline-block;
+    border: 2px solid var(--primary-page-color);
+
+    border-radius: 2px;
+    margin-right: 7px;
+    width: 15px;
+    height: 15px;   
+}
+
+.icon__check + a {
+    color: var(--accent-color);
+    margin-left: 7px;
+}
+
+.checkbox:checked + .icon__check {
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: border-box;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+
 }
 
 .form [type="submit"] {
@@ -248,6 +297,11 @@ margin-bottom: 12px;
     border-radius: 4px;
     border: none;
 }
+
+.form [type="submit"]:hover {
+    cursor: pointer;
+}
+
 
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -318,7 +372,7 @@ margin-bottom: 12px;
     text-align: center;
 }
 
-.hiden {
+.hidden {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -823,4 +877,58 @@ margin-bottom: 30px;
 
 .social__footer__item:not(:last-child) {
     margin-right: 10px;
+}
+
+.footer__box__mail {
+    margin-left: 93px;
+}
+
+.footer__list__mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text__mail {
+    display: block;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: inherit;
+    padding: 15px 0 15px 16px;
+    outline: transparent;
+    color: var(--primary-bg-color);
+}
+
+.taxt__mail:focus-visible {
+    border: transparent;
+}
+    
+
+.send__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color);
+    border-radius: 4px;
+    border: none;
+    margin-left: 12px;
+    padding: 10px 28px;
+}
+
+.send__btn p {
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+}
+
+.send__btn:hover,
+.send__btn:focus {
+    cursor: pointer;
 }
