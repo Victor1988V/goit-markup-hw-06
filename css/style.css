@@ -153,7 +153,9 @@ a {
     background: var(--primary-bg-color);
     border: none;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);}
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .modal__btn:hover,
 .modal__btn:focus {
@@ -187,6 +189,7 @@ a {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
+    text-align: center;
     margin-top: 0;
     margin-bottom: 12px;
     color: var(--primary-page-color);
@@ -198,6 +201,7 @@ a {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__filed input:hover,
@@ -211,6 +215,7 @@ a {
     bottom: 11px;
     left: 15px;
     fill: var(--primary-page-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .icon__form:hover {
@@ -227,6 +232,11 @@ a {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: transparent;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .form__filed textarea:hover {
@@ -242,7 +252,7 @@ a {
 .form__input:hover + .icon__form,
 .form__input:focus + .icon__form {
     color: var(--accent-color);
-    fill: currentColor;
+    fill: currentColor;    
 }
 
 .form__filed label {
@@ -620,17 +630,6 @@ line-height: 1.19;
     margin-left: 50px;
 }
 
-/* .box {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px #ECECEC;
-    
-    width: 1230px;
-    margin: auto;    
-    padding-left: 15px;
-    padding-right: 15px;    
-} */
-
 .contact-nav {
     display: flex;
     list-style: none;
@@ -737,7 +736,7 @@ margin: 0;
     padding: 20px 24px;
 }
 
-.border-bottom {
+.header {
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -898,7 +897,7 @@ margin-bottom: 30px;
     margin-left: 93px;
 }
 
-.footer__list__mail {
+.footer__form__mail {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -937,6 +936,7 @@ margin-bottom: 30px;
 }
 
 .send__btn p {
+    margin: 0;
     margin-right: 10px;
     font-weight: 700;
     font-size: 16px;
